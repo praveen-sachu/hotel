@@ -1,0 +1,75 @@
+.container4{
+    padding: 10px;
+    background-color: rgb(235, 228, 228);
+    height: 100vh;
+    position: relative;
+    font-weight: bold;
+}
+.roomhead{
+    display: flex;
+    justify-content: space-between;
+}
+.roomheading{
+    font-size: 20px;
+}
+.createroom{
+    color: orange;
+}
+.margintop{
+    margin-top: 15px;
+}
+.row{
+    padding: 10px;
+    background-color: rgb(235, 228, 228);
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+.color{
+    color: rgb(207, 169, 107);
+}
+
+/* Pop up */
+
+.container5{
+    background-color: rgba(82, 73, 73, 0.205);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+}
+form{
+    background-color: rgb(233, 229, 226);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    width: 60%;
+}
+.inputstyle{
+    font-size: 10px;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+.buttontype{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+.cancel{
+    color: rgb(207, 169, 107);
+    cursor: pointer;
+}
+.none1{
+    display: none;
+}

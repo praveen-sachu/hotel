@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.container2{
+    height: 105vh;  
+    font-size: 25px;
+    background-color: rgb(205, 202, 199);
+    font-weight: bold;
+}
+.contents{
+    background-color: white;
+    font-size: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    margin-bottom: 15px;
+    outline: none; 
+    width: 100%;
+}
+.room1{
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+.underline{
+    text-decoration: none;
+    color: white;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+}
+.booking{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.back{
+    margin-left: 30px;
+    padding: 5px;
+    color: rgb(196, 143, 59);
+}

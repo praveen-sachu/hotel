@@ -1,12 +1,34 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import Header from '../../Components/Header/Header'
 // import Input from '../../Components/Input/Input'
 import './bookings.css'
 import Button from '../../Components/Button/Button'
-import Div from '../../Components/data/Div'
+import Data from '../../Components/data/Data'
 import { useNavigate } from 'react-router-dom'
 const Bookings = () => {
+  const[data,setData]=useState([])
   const navigate=useNavigate();
+
+  async function getData(){
+    let result= await fetch("https://localhost:7034/newbookings",
+    {
+    method:'GET',
+    headers:{
+      "content-type":'application/json',
+    }
+  } 
+  )
+    return await result.json();
+  }
+  useEffect(()=>{
+    const userData =async()=>{
+    const result =await getData();
+    setData(result);
+  };
+  userData();
+  },[]
+  );
+
   return (
     <>
     <Header/>
@@ -38,22 +60,16 @@ const Bookings = () => {
           <div className='headdata'><b>Check Out date</b></div>
           <div className='headdata'><b>State</b></div>
         </div>
-        <div className='row'>
-          <Div  data='Goncalves' type='headdata1'/>
-          <Div  data='Sofia'/>
-          <Div  data='101'/>
-          <Div  data='23 Jan 2020'/>
-          <Div  data='23 Jan 2020'/>
-          <Div  data='CheckedIn'/>
-        </div>
-        <div className='row'>
-        <Div data='Noronha' type='headdata1'/>
-          <Div data='Beatriz'/>
-          <Div data='301'/>
-          <Div data='23 Jan 2020'/>
-          <Div data='23 Jan 2020'/>
-          <Div data='CheckedOut'/>
-        </div>
+        
+        {data.map((value,index)=>
+        (
+          
+        <Data a={value.lastname} b={value.firstname} c={""} d={value.checkin} e={value.checkout} f={""}/>
+        
+        )
+        )}
+        
+        
     </div>
     </div>
     </>
